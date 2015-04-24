@@ -1,0 +1,29 @@
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+
+$break-small: 38rem;
+$break-medium: 48rem;
+$break-large: 58rem;
+$break-xlarge: 64rem;
+
+@mixin respond-to($media) {
+  @if $media == "small-only" {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == small {
+    @media only screen and (min-width: $break-small) { @content; }
+  }
+  @else if $media == medium {
+    @media only screen and (min-width: $break-medium) { @content; }
+  }
+  @else if $media == large {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+  @else if $media == xlarge {
+    @media only screen and (min-width: $break-xlarge) { @content; }
+  }
+}

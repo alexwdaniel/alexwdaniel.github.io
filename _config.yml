@@ -1,16 +1,18 @@
 # Dependencies
-markdown:         redcarpet
+markdown:         kramdown
 highlighter:      pygments
 
 # Permalinks
-permalink:        pretty
+permalink:        /blog/:title/
 relative_permalinks: true
 
 # Setup
 title:            Alex Daniel
-description:      'Ruby on Rails, AngularJS developer. Swift newbie.'
+description:      'Ruby on Rails, AngularJS developer.'
 url:              http://alexander.codes
 baseurl:          /
+
+excerpt_separator: <!--more-->
 
 sass:
     sass_dir: _sass

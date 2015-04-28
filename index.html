@@ -20,11 +20,3 @@ title: Home
   </div>
   {% endfor %}
 </div>
-
-{% if site.host != "127.0.0.1" %}
-<script type="text/javascript">
-  window.onload = function() {
-    mixpanel.track("Index.PageView");
-  };
-</script>
-{% endif %}

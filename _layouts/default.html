@@ -11,5 +11,13 @@
       {{ content }}
     </div>
 
+    {% if site.host != "127.0.0.1" %}
+    <script type="text/javascript">
+      window.onload = function() {
+        mixpanel.track("PageView", {"page-title": "{{ page.title }}" });
+      };
+    </script>
+    {% endif %}
+
   </body>
 </html>

@@ -17,6 +17,20 @@
         mixpanel.track("PageView", {"page-title": "{{ page.title }}" });
       };
     </script>
+
+    <script type="text/javascript">
+      function trackLink(event) {
+        var link = event.currentTarget;
+        var name = link.innerText;
+        mixpanel.track("LinkClick", {"link-title": name});
+      }
+
+      var links = document.getElementsByClassName('mxp-link');
+      for (var i = 0; i < links.length; i++) {
+        var link = links[i];
+        link.addEventListener('click', trackLink, false);
+      }
+    </script>
     {% endif %}
 
   </body>

@@ -9,12 +9,15 @@
 @import "mixins";
 
 $font-family: 'Open Sans', sans-serif;
+$font-size: 16px;
 
 html, body {
   font-family: $font-family;
 }
 
 div.content {
+
+  p, li { font-size:$font-size; }
 
   div.posts {
 
@@ -32,14 +35,10 @@ div.content {
   } //posts
 
   div.post {
-    p, a.read-more {
-      font-size:16px;
-    }
+    a.read-more { font-size:$font-size; }
   }
 
-  div.page {
-    margin-bottom:0;
-  }
+  div.page { margin-bottom:0; }
 
 }
 

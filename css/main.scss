@@ -4,8 +4,6 @@
 @charset "utf-8";
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "poole";
-@import "hyde";
 @import "mixins";
 
 $font-family: 'Open Sans', sans-serif;
@@ -13,87 +11,4 @@ $font-size: 16px;
 
 html, body {
   font-family: $font-family;
-}
-
-div.content {
-
-  p, li { font-size:$font-size; }
-
-  div.posts {
-
-    div.post {
-      padding-bottom:4rem;
-      border-bottom:1px solid #efefef;
-      &:last-of-type {
-        border:none;
-        padding-bottom:0;
-        margin-bottom:0;
-      }
-
-    } //post
-
-  } //posts
-
-  div.post {
-    a.read-more { font-size:$font-size; }
-  }
-
-  div.page { margin-bottom:0; }
-
-}
-
-div.sidebar {
-  background-color:#021535;
-
-  // @include respond-to(small-only) {
-  //   background-color:red!important;
-  // }
-  // @include respond-to(small) {
-  //   background-color:green!important;
-  // }
-  // @include respond-to(medium) {
-  //   background-color:orange!important;
-  // }
-  // @include respond-to(large) {
-  //   background-color:yellow!important;
-  // }
-  // @include respond-to(xlarge) {
-  //   background-color:pink!important;
-  // }
-
-  div.container.sidebar-sticky {
-    @include respond-to(medium) {
-      bottom:2rem;
-    }
-
-    div.sidebar-about {
-      h1 {
-        font-family: $font-family;
-        font-size:1.6rem;
-      }
-      p.lead {
-        font-size:1rem;
-      }
-    }
-    nav.sidebar-nav {
-      margin:0;
-      ul {
-        list-style:none;
-        padding:0;
-        margin:0;
-        font-size:0.8rem;
-        li {
-          display:inline-block;
-          a.sidebar-nav-item {
-            padding:2px 8px;
-            &:first-of-type {
-              padding-left:0;
-            }
-          }
-        } //li
-      } //ul
-    } //sidebar-nav
-
-  } //sidebar-sticky
-
 }

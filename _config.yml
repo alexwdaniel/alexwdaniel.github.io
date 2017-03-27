@@ -8,7 +8,8 @@ relative_permalinks: true
 
 # Setup
 title:            Alex Daniel
-description:      'Ruby on Rails, AngularJS developer.'
+description:      'Software Developer'
+location:         'San Francisco, CA'
 url:              http://alexander.codes
 baseurl:          /
 

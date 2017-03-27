@@ -5,10 +5,45 @@
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import "mixins";
+@import "reset";
 
 $font-family: 'Open Sans', sans-serif;
 $font-size: 16px;
 
 html, body {
   font-family: $font-family;
+}
+
+.about {
+  @include respond-to(small) {
+    margin: 60px 0 30px;
+  }
+  margin: 30px 0;
+  text-align: center;
+}
+
+.about__title {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.about__description {
+  margin-bottom: 5px;
+}
+
+.about__location {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  max-width: 320px;
+}
+
+.links__link {
+  flex: 1;
+  text-align: center;
 }
